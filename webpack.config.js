@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const MiniMiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -30,7 +30,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.s[ac]ss$/,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -50,6 +50,7 @@ module.exports = {
     ],
     devServer:{
         contentBase: path.join(__dirname, 'dist'),
+        compress: true,
         port: 3005,
     }
 }
