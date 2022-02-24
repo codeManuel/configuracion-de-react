@@ -28,7 +28,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(sa|sc|c)ss$/i,
+                test: /\.(css|scss)$/,
                 use: [
                     'style-loader',
                     'css-loader',
@@ -50,5 +50,5 @@ module.exports = {
         allowdHost: path.join(__dirname, 'dist'),
         compress: true,
         port: 3005,
-    }
+    },
 }
