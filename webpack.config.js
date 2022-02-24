@@ -28,7 +28,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/,
+                test: /\.(sa|sc|c)ss$/i,
                 use: [
                     'style-loader',
                     'css-loader',
@@ -44,7 +44,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
-        }),
+        })
     ],
     devServer:{
         allowdHost: path.join(__dirname, 'dist'),
